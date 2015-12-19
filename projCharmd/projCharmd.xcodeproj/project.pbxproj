@@ -207,7 +207,7 @@
 				TargetAttributes = {
 					E4E671E21C2618FF00B96C7A = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = NQKC2A759Y;
+						DevelopmentTeam = U36CWGN78Z;
 					};
 					E4E671FB1C2618FF00B96C7A = {
 						CreatedOnToolsVersion = 7.1;
@@ -416,10 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = projCharmd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = marilyn.projCharmd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -427,10 +430,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = projCharmd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = marilyn.projCharmd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -501,6 +507,7 @@
 				E4E672121C26190000B96C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4E672131C26190000B96C7A /* Build configuration list for PBXNativeTarget "projCharmdTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +516,7 @@
 				E4E672151C26190000B96C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4E672161C26190000B96C7A /* Build configuration list for PBXNativeTarget "projCharmdUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +525,7 @@
 				E4E672181C26190000B96C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
