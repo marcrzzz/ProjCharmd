@@ -15,6 +15,13 @@
 		E4E671F61C2618FF00B96C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E671F41C2618FF00B96C7A /* LaunchScreen.storyboard */; };
 		E4E672011C2618FF00B96C7A /* projCharmdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E672001C2618FF00B96C7A /* projCharmdTests.m */; };
 		E4E6720C1C26190000B96C7A /* projCharmdUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E6720B1C26190000B96C7A /* projCharmdUITests.m */; };
+		E4E672271C2633EA00B96C7A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E672261C2633EA00B96C7A /* FBSDKCoreKit.framework */; };
+		E4E672291C26340500B96C7A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E672281C26340500B96C7A /* FBSDKLoginKit.framework */; };
+		E4E6722B1C26340E00B96C7A /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E6722A1C26340E00B96C7A /* FBSDKShareKit.framework */; };
+		E4E672301C264DE400B96C7A /* aboutmeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E6722F1C264DE400B96C7A /* aboutmeView.m */; };
+		E4E672331C268D0D00B96C7A /* matchesView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E672321C268D0D00B96C7A /* matchesView.m */; };
+		E4E672361C268D2600B96C7A /* profileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E672351C268D2600B96C7A /* profileView.m */; };
+		E4E672391C268D5C00B96C7A /* chatView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E672381C268D5C00B96C7A /* chatView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,17 @@
 		E4E672071C26190000B96C7A /* projCharmdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projCharmdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E6720B1C26190000B96C7A /* projCharmdUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = projCharmdUITests.m; sourceTree = "<group>"; };
 		E4E6720D1C26190000B96C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4E672261C2633EA00B96C7A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		E4E672281C26340500B96C7A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		E4E6722A1C26340E00B96C7A /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		E4E6722E1C264DE400B96C7A /* aboutmeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutmeView.h; sourceTree = "<group>"; };
+		E4E6722F1C264DE400B96C7A /* aboutmeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutmeView.m; sourceTree = "<group>"; };
+		E4E672311C268D0D00B96C7A /* matchesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matchesView.h; sourceTree = "<group>"; };
+		E4E672321C268D0D00B96C7A /* matchesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = matchesView.m; sourceTree = "<group>"; };
+		E4E672341C268D2600B96C7A /* profileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileView.h; sourceTree = "<group>"; };
+		E4E672351C268D2600B96C7A /* profileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileView.m; sourceTree = "<group>"; };
+		E4E672371C268D5C00B96C7A /* chatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatView.h; sourceTree = "<group>"; };
+		E4E672381C268D5C00B96C7A /* chatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E672291C26340500B96C7A /* FBSDKLoginKit.framework in Frameworks */,
+				E4E672271C2633EA00B96C7A /* FBSDKCoreKit.framework in Frameworks */,
+				E4E6722B1C26340E00B96C7A /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +102,7 @@
 		E4E671DA1C2618FF00B96C7A = {
 			isa = PBXGroup;
 			children = (
+				E4E672191C26306700B96C7A /* Frameworks */,
 				E4E671E51C2618FF00B96C7A /* projCharmd */,
 				E4E671FF1C2618FF00B96C7A /* projCharmdTests */,
 				E4E6720A1C26190000B96C7A /* projCharmdUITests */,
@@ -103,6 +125,14 @@
 			children = (
 				E4E671E91C2618FF00B96C7A /* AppDelegate.h */,
 				E4E671EA1C2618FF00B96C7A /* AppDelegate.m */,
+				E4E672371C268D5C00B96C7A /* chatView.h */,
+				E4E672381C268D5C00B96C7A /* chatView.m */,
+				E4E672341C268D2600B96C7A /* profileView.h */,
+				E4E672351C268D2600B96C7A /* profileView.m */,
+				E4E672311C268D0D00B96C7A /* matchesView.h */,
+				E4E672321C268D0D00B96C7A /* matchesView.m */,
+				E4E6722E1C264DE400B96C7A /* aboutmeView.h */,
+				E4E6722F1C264DE400B96C7A /* aboutmeView.m */,
 				E4E671EC1C2618FF00B96C7A /* ViewController.h */,
 				E4E671ED1C2618FF00B96C7A /* ViewController.m */,
 				E4E671EF1C2618FF00B96C7A /* Main.storyboard */,
@@ -138,6 +168,16 @@
 				E4E6720D1C26190000B96C7A /* Info.plist */,
 			);
 			path = projCharmdUITests;
+			sourceTree = "<group>";
+		};
+		E4E672191C26306700B96C7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4E6722A1C26340E00B96C7A /* FBSDKShareKit.framework */,
+				E4E672281C26340500B96C7A /* FBSDKLoginKit.framework */,
+				E4E672261C2633EA00B96C7A /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E672361C268D2600B96C7A /* profileView.m in Sources */,
+				E4E672301C264DE400B96C7A /* aboutmeView.m in Sources */,
 				E4E671EE1C2618FF00B96C7A /* ViewController.m in Sources */,
 				E4E671EB1C2618FF00B96C7A /* AppDelegate.m in Sources */,
+				E4E672391C268D5C00B96C7A /* chatView.m in Sources */,
+				E4E672331C268D0D00B96C7A /* matchesView.m in Sources */,
 				E4E671E81C2618FF00B96C7A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +462,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "/Users/Marcrzzz/Documents/FacebookSDK/**";
 				INFOPLIST_FILE = projCharmd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = marilyn.projCharmd;
@@ -432,6 +478,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "/Users/Marcrzzz/Documents/FacebookSDK/**";
 				INFOPLIST_FILE = projCharmd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = marilyn.projCharmd;
