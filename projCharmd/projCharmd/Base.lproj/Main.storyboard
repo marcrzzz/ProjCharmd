@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -117,7 +118,7 @@
         <!--Me-->
         <scene sceneID="FTX-OZ-cJb">
             <objects>
-                <viewController storyboardIdentifier="profileView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lHd-Jf-gyz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lHd-Jf-gyz" customClass="profileView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="voQ-eO-yqp"/>
                         <viewControllerLayoutGuide type="bottom" id="pEa-ZG-dHT"/>
@@ -126,29 +127,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rXl-AG-HPs">
-                                <rect key="frame" x="383" y="28" width="190" height="172"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiffany Liu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vc-za-puC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiffany Liu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vc-za-puC">
                                 <rect key="frame" x="390" y="208" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1n-AE-r5I">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1n-AE-r5I">
                                 <rect key="frame" x="390" y="237" width="20" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sG-5s-2Yl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sG-5s-2Yl">
                                 <rect key="frame" x="390" y="266" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="lHd-Jf-gyz" eventType="touchUpInside" id="0Em-Aq-w9i"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rXl-AG-HPs">
+                                <rect key="frame" x="390" y="28" width="190" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="mDr-NG-6Tr"/>
+                                    <constraint firstAttribute="height" constant="172" id="yxD-uc-03A"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rXl-AG-HPs" firstAttribute="leading" secondItem="8Vc-za-puC" secondAttribute="leading" id="0Bt-Hh-Sce"/>
+                            <constraint firstItem="8Vc-za-puC" firstAttribute="top" secondItem="rXl-AG-HPs" secondAttribute="bottom" constant="8" symbolic="YES" id="301-CA-FdI"/>
+                            <constraint firstItem="a1n-AE-r5I" firstAttribute="top" secondItem="8Vc-za-puC" secondAttribute="bottom" constant="8" symbolic="YES" id="J2a-Z1-n4u"/>
+                            <constraint firstItem="rXl-AG-HPs" firstAttribute="leading" secondItem="a1n-AE-r5I" secondAttribute="leading" id="Pzz-WL-zyq"/>
+                            <constraint firstItem="rXl-AG-HPs" firstAttribute="trailing" secondItem="Vyh-tF-amJ" secondAttribute="trailingMargin" id="aBi-Rf-GC7"/>
+                            <constraint firstItem="rXl-AG-HPs" firstAttribute="top" secondItem="voQ-eO-yqp" secondAttribute="bottom" constant="8" symbolic="YES" id="iIt-hh-4eh"/>
+                            <constraint firstItem="rXl-AG-HPs" firstAttribute="leading" secondItem="2sG-5s-2Yl" secondAttribute="leading" id="tDq-mp-ITh"/>
+                            <constraint firstItem="2sG-5s-2Yl" firstAttribute="top" secondItem="a1n-AE-r5I" secondAttribute="bottom" constant="8" symbolic="YES" id="yRD-KP-beq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" id="0cW-0z-J6n"/>
+                    <connections>
+                        <outlet property="userAge" destination="a1n-AE-r5I" id="VZ0-B3-8ah"/>
+                        <outlet property="userName" destination="8Vc-za-puC" id="EVl-9w-lsE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQ6-02-2Vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +179,7 @@
         <!--Matches-->
         <scene sceneID="Y8I-oV-8L0">
             <objects>
-                <viewController storyboardIdentifier="matchesView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LNH-sd-zS8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="matchesView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LNH-sd-zS8" customClass="matchesView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jmu-G7-haU"/>
                         <viewControllerLayoutGuide type="bottom" id="9YT-6w-gkd"/>
@@ -165,7 +187,34 @@
                     <view key="view" contentMode="scaleToFill" id="GPA-lf-bKs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kul-oZ-16h">
+                                <rect key="frame" x="270" y="96" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Matches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWQ-OH-sxP">
+                                <rect key="frame" x="248" y="49" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieb-Ae-tkv">
+                                <rect key="frame" x="439" y="453" width="93" height="30"/>
+                                <state key="normal" title="Past Matches"/>
+                                <connections>
+                                    <action selector="gotoPastMatches:" destination="LNH-sd-zS8" eventType="touchUpInside" id="nKp-97-rEh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZWQ-OH-sxP" firstAttribute="centerX" secondItem="GPA-lf-bKs" secondAttribute="centerX" id="9H9-Ij-XCd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ieb-Ae-tkv" secondAttribute="trailing" constant="48" id="XIy-z6-CNc"/>
+                            <constraint firstItem="ZWQ-OH-sxP" firstAttribute="top" secondItem="Jmu-G7-haU" secondAttribute="bottom" constant="29" id="rzG-Lv-mmg"/>
+                            <constraint firstItem="9YT-6w-gkd" firstAttribute="top" secondItem="Ieb-Ae-tkv" secondAttribute="bottom" constant="68" id="vPs-us-3Gm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Matches" id="Bbt-qW-X3b"/>
                 </viewController>
@@ -195,7 +244,7 @@
         <!--Chat-->
         <scene sceneID="w33-0O-f0S">
             <objects>
-                <viewController storyboardIdentifier="chatView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HpE-9L-KIN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HpE-9L-KIN" customClass="chatView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KuM-SN-rrz"/>
                         <viewControllerLayoutGuide type="bottom" id="i0P-SB-7Vs"/>

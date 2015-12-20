@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface matchesView : UIViewController
+- (IBAction)gotoPastMatches:(id)sender;
 
 @end

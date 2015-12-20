@@ -10,7 +10,16 @@
 
 @implementation profileView
 
--(IBAction)play {
+//-(IBAction)play {
+//    CFBundleRef mainBundle =CFBundleGetMainBundle();
+//    CFURLRef soundFileURLRef;
+//    soundFileURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"taysAudio", CFSTR ("m4a"), NULL);
+//    UInt32 soundID;
+//    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
+//    AudioServicesPlaySystemSound(soundID);
+//}
+
+- (IBAction)play:(id)sender {
     CFBundleRef mainBundle =CFBundleGetMainBundle();
     CFURLRef soundFileURLRef;
     soundFileURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"taysAudio", CFSTR ("m4a"), NULL);
@@ -18,5 +27,4 @@
     AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
 }
-
 @end

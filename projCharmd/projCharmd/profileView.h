@@ -10,7 +10,10 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface profileView : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+- (IBAction)play:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *userAge;
 
--(IBAction)play;
+
 
 @end

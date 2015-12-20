@@ -10,4 +10,6 @@
 
 @implementation matchesView
 
+- (IBAction)gotoPastMatches:(id)sender {
+}
 @end
