@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A77998581C26B4D30037BDCB /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A77998571C26B4D30037BDCB /* test1.jpg */; };
+		A779985A1C26B7C70037BDCB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77998591C26B7C70037BDCB /* AudioToolbox.framework */; };
+		A779985C1C26BA100037BDCB /* taysAudio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A779985B1C26BA100037BDCB /* taysAudio.m4a */; };
 		E4E671E81C2618FF00B96C7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671E71C2618FF00B96C7A /* main.m */; };
 		E4E671EB1C2618FF00B96C7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671EA1C2618FF00B96C7A /* AppDelegate.m */; };
 		E4E671EE1C2618FF00B96C7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671ED1C2618FF00B96C7A /* ViewController.m */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A77998571C26B4D30037BDCB /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test1.jpg; path = images/test1.jpg; sourceTree = "<group>"; };
+		A77998591C26B7C70037BDCB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A779985B1C26BA100037BDCB /* taysAudio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = taysAudio.m4a; path = audios/taysAudio.m4a; sourceTree = "<group>"; };
 		E4E671E31C2618FF00B96C7A /* projCharmd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projCharmd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E671E71C2618FF00B96C7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4E671E91C2618FF00B96C7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A779985A1C26B7C70037BDCB /* AudioToolbox.framework in Frameworks */,
 				E4E672291C26340500B96C7A /* FBSDKLoginKit.framework in Frameworks */,
 				E4E672271C2633EA00B96C7A /* FBSDKCoreKit.framework in Frameworks */,
 				E4E6722B1C26340E00B96C7A /* FBSDKShareKit.framework in Frameworks */,
@@ -123,6 +130,8 @@
 		E4E671E51C2618FF00B96C7A /* projCharmd */ = {
 			isa = PBXGroup;
 			children = (
+				A779985B1C26BA100037BDCB /* taysAudio.m4a */,
+				A77998571C26B4D30037BDCB /* test1.jpg */,
 				E4E671E91C2618FF00B96C7A /* AppDelegate.h */,
 				E4E671EA1C2618FF00B96C7A /* AppDelegate.m */,
 				E4E672371C268D5C00B96C7A /* chatView.h */,
@@ -173,6 +182,7 @@
 		E4E672191C26306700B96C7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A77998591C26B7C70037BDCB /* AudioToolbox.framework */,
 				E4E6722A1C26340E00B96C7A /* FBSDKShareKit.framework */,
 				E4E672281C26340500B96C7A /* FBSDKLoginKit.framework */,
 				E4E672261C2633EA00B96C7A /* FBSDKCoreKit.framework */,
@@ -287,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E671F61C2618FF00B96C7A /* LaunchScreen.storyboard in Resources */,
+				A77998581C26B4D30037BDCB /* test1.jpg in Resources */,
+				A779985C1C26BA100037BDCB /* taysAudio.m4a in Resources */,
 				E4E671F31C2618FF00B96C7A /* Assets.xcassets in Resources */,
 				E4E671F11C2618FF00B96C7A /* Main.storyboard in Resources */,
 			);
