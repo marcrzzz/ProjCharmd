@@ -10,6 +10,13 @@
 
 @implementation matchesView
 
+
+
+
 - (IBAction)gotoPastMatches:(id)sender {
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"pastMatches"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 @end

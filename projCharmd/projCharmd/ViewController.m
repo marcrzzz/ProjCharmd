@@ -19,22 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.firstLabel.hidden=YES;
-    self.continueButton.hidden=YES;
     
-    if ([FBSDKAccessToken currentAccessToken]) {
+    
+    
+    
+    if ([FBSDKAccessToken currentAccessToken] != nil) {
+        
+        
+        
         self.fBloginButton.hidden=YES;
         self.firstLabel.hidden=0;
         self.continueButton.hidden=0;
-        
-        
         //[self.view addSubview:_fBloginButton];
       
         
 
       
         
-        //Add the tab bar controller to the window
+        
       
         
         // TODO:Token is already available.
@@ -44,11 +46,19 @@
     //loginButton.center = self.view.center;
     else{
     [self.view addSubview:_fBloginButton];
+    self.firstLabel.hidden=YES;
+    self.continueButton.hidden=YES;
     }
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+    [FBSDKAccessToken setCurrentAccessToken:nil];
+    [FBSDKProfile setCurrentProfile:nil];
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login logOut];
 
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -10,6 +10,9 @@
 		A77998581C26B4D30037BDCB /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A77998571C26B4D30037BDCB /* test1.jpg */; };
 		A779985A1C26B7C70037BDCB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77998591C26B7C70037BDCB /* AudioToolbox.framework */; };
 		A779985C1C26BA100037BDCB /* taysAudio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A779985B1C26BA100037BDCB /* taysAudio.m4a */; };
+		E44C6A441C278AA40077DB06 /* SetupRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = E44C6A431C278AA40077DB06 /* SetupRecordView.m */; };
+		E44C6A461C278DB20077DB06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44C6A451C278DB20077DB06 /* AVFoundation.framework */; };
+		E44C6A481C278DC40077DB06 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44C6A471C278DC40077DB06 /* CoreAudio.framework */; };
 		E4E671E81C2618FF00B96C7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671E71C2618FF00B96C7A /* main.m */; };
 		E4E671EB1C2618FF00B96C7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671EA1C2618FF00B96C7A /* AppDelegate.m */; };
 		E4E671EE1C2618FF00B96C7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671ED1C2618FF00B96C7A /* ViewController.m */; };
@@ -48,6 +51,10 @@
 		A77998571C26B4D30037BDCB /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test1.jpg; path = images/test1.jpg; sourceTree = "<group>"; };
 		A77998591C26B7C70037BDCB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A779985B1C26BA100037BDCB /* taysAudio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = taysAudio.m4a; path = audios/taysAudio.m4a; sourceTree = "<group>"; };
+		E44C6A421C278AA40077DB06 /* SetupRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupRecordView.h; sourceTree = "<group>"; };
+		E44C6A431C278AA40077DB06 /* SetupRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupRecordView.m; sourceTree = "<group>"; };
+		E44C6A451C278DB20077DB06 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E44C6A471C278DC40077DB06 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		E4E671E31C2618FF00B96C7A /* projCharmd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projCharmd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E671E71C2618FF00B96C7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4E671E91C2618FF00B96C7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44C6A481C278DC40077DB06 /* CoreAudio.framework in Frameworks */,
+				E44C6A461C278DB20077DB06 /* AVFoundation.framework in Frameworks */,
 				A779985A1C26B7C70037BDCB /* AudioToolbox.framework in Frameworks */,
 				E4E672291C26340500B96C7A /* FBSDKLoginKit.framework in Frameworks */,
 				E4E672271C2633EA00B96C7A /* FBSDKCoreKit.framework in Frameworks */,
@@ -106,6 +115,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E44C6A411C278A590077DB06 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E4E672371C268D5C00B96C7A /* chatView.h */,
+				E4E672381C268D5C00B96C7A /* chatView.m */,
+				E4E672341C268D2600B96C7A /* profileView.h */,
+				E4E672351C268D2600B96C7A /* profileView.m */,
+				E4E672311C268D0D00B96C7A /* matchesView.h */,
+				E4E672321C268D0D00B96C7A /* matchesView.m */,
+				E4E6722E1C264DE400B96C7A /* aboutmeView.h */,
+				E4E6722F1C264DE400B96C7A /* aboutmeView.m */,
+				E44C6A421C278AA40077DB06 /* SetupRecordView.h */,
+				E44C6A431C278AA40077DB06 /* SetupRecordView.m */,
+				E4E671EC1C2618FF00B96C7A /* ViewController.h */,
+				E4E671ED1C2618FF00B96C7A /* ViewController.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		E4E671DA1C2618FF00B96C7A = {
 			isa = PBXGroup;
 			children = (
@@ -134,16 +162,7 @@
 				A77998571C26B4D30037BDCB /* test1.jpg */,
 				E4E671E91C2618FF00B96C7A /* AppDelegate.h */,
 				E4E671EA1C2618FF00B96C7A /* AppDelegate.m */,
-				E4E672371C268D5C00B96C7A /* chatView.h */,
-				E4E672381C268D5C00B96C7A /* chatView.m */,
-				E4E672341C268D2600B96C7A /* profileView.h */,
-				E4E672351C268D2600B96C7A /* profileView.m */,
-				E4E672311C268D0D00B96C7A /* matchesView.h */,
-				E4E672321C268D0D00B96C7A /* matchesView.m */,
-				E4E6722E1C264DE400B96C7A /* aboutmeView.h */,
-				E4E6722F1C264DE400B96C7A /* aboutmeView.m */,
-				E4E671EC1C2618FF00B96C7A /* ViewController.h */,
-				E4E671ED1C2618FF00B96C7A /* ViewController.m */,
+				E44C6A411C278A590077DB06 /* views */,
 				E4E671EF1C2618FF00B96C7A /* Main.storyboard */,
 				E4E671F21C2618FF00B96C7A /* Assets.xcassets */,
 				E4E671F41C2618FF00B96C7A /* LaunchScreen.storyboard */,
@@ -182,6 +201,8 @@
 		E4E672191C26306700B96C7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E44C6A471C278DC40077DB06 /* CoreAudio.framework */,
+				E44C6A451C278DB20077DB06 /* AVFoundation.framework */,
 				A77998591C26B7C70037BDCB /* AudioToolbox.framework */,
 				E4E6722A1C26340E00B96C7A /* FBSDKShareKit.framework */,
 				E4E672281C26340500B96C7A /* FBSDKLoginKit.framework */,
@@ -332,6 +353,7 @@
 				E4E672391C268D5C00B96C7A /* chatView.m in Sources */,
 				E4E672331C268D0D00B96C7A /* matchesView.m in Sources */,
 				E4E671E81C2618FF00B96C7A /* main.m in Sources */,
+				E44C6A441C278AA40077DB06 /* SetupRecordView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
