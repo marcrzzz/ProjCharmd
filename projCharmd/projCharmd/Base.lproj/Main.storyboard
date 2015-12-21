@@ -259,7 +259,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rXl-AG-HPs">
-                                <rect key="frame" x="390" y="28" width="190" height="172"/>
+                                <rect key="frame" x="390" y="36" width="190" height="172"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="mDr-NG-6Tr"/>
                                     <constraint firstAttribute="height" constant="172" id="yxD-uc-03A"/>
@@ -269,11 +269,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rXl-AG-HPs" firstAttribute="leading" secondItem="8Vc-za-puC" secondAttribute="leading" id="0Bt-Hh-Sce"/>
-                            <constraint firstItem="8Vc-za-puC" firstAttribute="top" secondItem="rXl-AG-HPs" secondAttribute="bottom" constant="8" symbolic="YES" id="301-CA-FdI"/>
+                            <constraint firstItem="8Vc-za-puC" firstAttribute="top" secondItem="rXl-AG-HPs" secondAttribute="bottom" id="301-CA-FdI"/>
                             <constraint firstItem="a1n-AE-r5I" firstAttribute="top" secondItem="8Vc-za-puC" secondAttribute="bottom" constant="8" symbolic="YES" id="J2a-Z1-n4u"/>
                             <constraint firstItem="rXl-AG-HPs" firstAttribute="leading" secondItem="a1n-AE-r5I" secondAttribute="leading" id="Pzz-WL-zyq"/>
                             <constraint firstItem="rXl-AG-HPs" firstAttribute="trailing" secondItem="Vyh-tF-amJ" secondAttribute="trailingMargin" id="aBi-Rf-GC7"/>
-                            <constraint firstItem="rXl-AG-HPs" firstAttribute="top" secondItem="voQ-eO-yqp" secondAttribute="bottom" constant="8" symbolic="YES" id="iIt-hh-4eh"/>
+                            <constraint firstItem="rXl-AG-HPs" firstAttribute="top" secondItem="voQ-eO-yqp" secondAttribute="bottom" constant="16" id="iIt-hh-4eh"/>
                             <constraint firstItem="rXl-AG-HPs" firstAttribute="leading" secondItem="2sG-5s-2Yl" secondAttribute="leading" id="tDq-mp-ITh"/>
                             <constraint firstItem="2sG-5s-2Yl" firstAttribute="top" secondItem="a1n-AE-r5I" secondAttribute="bottom" constant="8" symbolic="YES" id="yRD-KP-beq"/>
                         </constraints>
