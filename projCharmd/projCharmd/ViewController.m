@@ -19,46 +19,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     
-    
-    
-    
-    if ([FBSDKAccessToken currentAccessToken] != nil) {
-        
-        
-        
-        self.fBloginButton.hidden=YES;
-        self.firstLabel.hidden=0;
-        self.continueButton.hidden=0;
-        //[self.view addSubview:_fBloginButton];
-      
-        
-
-      
-        
-        
-      
-        
+    if ([FBSDKAccessToken currentAccessToken]) {
+//            self.fBloginButton.hidden=YES;
+//            self.firstLabel.hidden=0;
+//            self.continueButton.hidden=0;
+//            [self.view addSubview:_fBloginButton];
+     
         // TODO:Token is already available.
+//    }
+//    //FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+//    
+//    //loginButton.center = self.view.center;
     }
-    //FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    
-    //loginButton.center = self.view.center;
     else{
-    [self.view addSubview:_fBloginButton];
-    self.firstLabel.hidden=YES;
-    self.continueButton.hidden=YES;
-    }
+            [self.view addSubview:_fBloginButton];
+            self.firstLabel.hidden=YES;
+            self.continueButton.hidden=YES;
+        }
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
-    [FBSDKAccessToken setCurrentAccessToken:nil];
-    [FBSDKProfile setCurrentProfile:nil];
-    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-    [login logOut];
 
-}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -87,7 +72,7 @@
                                             NSLog(@"Logged in");
                                         }
                                         self.firstLabel.hidden=YES;
-                                        self.continueButton.hidden=YES;
+                                        self.continueButton.hidden=0;
                                         
                                         //process error or result
                                     }];

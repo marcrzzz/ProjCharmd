@@ -18,6 +18,7 @@ AVAudioPlayer *player;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.audioProgress setHidden:YES];
     [_stopButton setEnabled:NO];
     [_playButton setEnabled:NO];
     
@@ -60,7 +61,7 @@ AVAudioPlayer *player;
         AVAudioSession *session = [AVAudioSession sharedInstance];
         [session setActive:YES error:nil];
         [self.timer invalidate];
-        [self.audioProgress setHidden:YES];
+        //[self.audioProgress setHidden:YES];
         // Start recording
         [recorder record];
         [_recordButton setTitle:@"Pause" forState:UIControlStateNormal];
@@ -102,6 +103,7 @@ AVAudioPlayer *player;
         [player setDelegate:self];
         [player setVolume:100];
         [player play];
+        
         self.timer = [NSTimer scheduledTimerWithTimeInterval:0.25
                                                       target:self
                                                     selector:@selector(updateProgress)
@@ -110,6 +112,7 @@ AVAudioPlayer *player;
         [self.audioProgress setHidden:NO];
         
     }
+   
 }
 
 

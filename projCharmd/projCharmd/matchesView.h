@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+@interface matchesView : UIViewController <AVAudioPlayerDelegate>
 
-@interface matchesView : UIViewController
+
+@property (strong, nonatomic) NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIProgressView *audioProgress;
+@property (weak, nonatomic) IBOutlet UILabel *matchesName;
+@property (weak, nonatomic) IBOutlet UIImageView *matchesPic;
+- (IBAction)pressedPlay:(id)sender;
+
+
 - (IBAction)gotoPastMatches:(id)sender;
 
 
