@@ -30,6 +30,10 @@
 		E44C6A441C278AA40077DB06 /* SetupRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = E44C6A431C278AA40077DB06 /* SetupRecordView.m */; };
 		E44C6A461C278DB20077DB06 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44C6A451C278DB20077DB06 /* AVFoundation.framework */; };
 		E44C6A481C278DC40077DB06 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44C6A471C278DC40077DB06 /* CoreAudio.framework */; };
+		E44EE36D1C33ACD4005FA8CC /* pause_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EE3691C33ACD4005FA8CC /* pause_icon.png */; };
+		E44EE36E1C33ACD4005FA8CC /* play_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EE36A1C33ACD4005FA8CC /* play_icon.png */; };
+		E44EE36F1C33ACD4005FA8CC /* record_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EE36B1C33ACD4005FA8CC /* record_button.png */; };
+		E44EE3701C33ACD4005FA8CC /* stop_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E44EE36C1C33ACD4005FA8CC /* stop_icon.png */; };
 		E4E671E81C2618FF00B96C7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671E71C2618FF00B96C7A /* main.m */; };
 		E4E671EB1C2618FF00B96C7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671EA1C2618FF00B96C7A /* AppDelegate.m */; };
 		E4E671EE1C2618FF00B96C7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E671ED1C2618FF00B96C7A /* ViewController.m */; };
@@ -89,6 +93,10 @@
 		E44C6A431C278AA40077DB06 /* SetupRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupRecordView.m; sourceTree = "<group>"; };
 		E44C6A451C278DB20077DB06 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E44C6A471C278DC40077DB06 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		E44EE3691C33ACD4005FA8CC /* pause_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause_icon.png; path = ../../../../pause_icon.png; sourceTree = "<group>"; };
+		E44EE36A1C33ACD4005FA8CC /* play_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_icon.png; path = ../../../../play_icon.png; sourceTree = "<group>"; };
+		E44EE36B1C33ACD4005FA8CC /* record_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record_button.png; path = ../../../../record_button.png; sourceTree = "<group>"; };
+		E44EE36C1C33ACD4005FA8CC /* stop_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop_icon.png; path = ../../../../stop_icon.png; sourceTree = "<group>"; };
 		E4E671E31C2618FF00B96C7A /* projCharmd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projCharmd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E671E71C2618FF00B96C7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4E671E91C2618FF00B96C7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -203,6 +211,10 @@
 			isa = PBXGroup;
 			children = (
 				E42E66601C2B993900F0392A /* download.jpeg */,
+				E44EE36C1C33ACD4005FA8CC /* stop_icon.png */,
+				E44EE36A1C33ACD4005FA8CC /* play_icon.png */,
+				E44EE36B1C33ACD4005FA8CC /* record_button.png */,
+				E44EE3691C33ACD4005FA8CC /* pause_icon.png */,
 				E42E66611C2B993900F0392A /* images.jpeg */,
 				E42E66621C2B993900F0392A /* ryan.jpeg */,
 				E42E66631C2B993900F0392A /* tatum.jpeg */,
@@ -382,13 +394,17 @@
 				E42E66691C2B993900F0392A /* tatum.jpeg in Resources */,
 				A779985C1C26BA100037BDCB /* taysAudio.m4a in Resources */,
 				E42E66791C2B9C4400F0392A /* parse-library-1.11.0 in Resources */,
+				E44EE36F1C33ACD4005FA8CC /* record_button.png in Resources */,
 				E42E666B1C2B993900F0392A /* test1.jpg in Resources */,
 				E42E666A1C2B993900F0392A /* taylor.jpeg in Resources */,
 				E42E66661C2B993900F0392A /* download.jpeg in Resources */,
+				E44EE36D1C33ACD4005FA8CC /* pause_icon.png in Resources */,
+				E44EE36E1C33ACD4005FA8CC /* play_icon.png in Resources */,
 				E4E671F31C2618FF00B96C7A /* Assets.xcassets in Resources */,
 				E42E667B1C2BBF8500F0392A /* andrewAudio.mp3 in Resources */,
 				E42E66681C2B993900F0392A /* ryan.jpeg in Resources */,
 				E4E671F11C2618FF00B96C7A /* Main.storyboard in Resources */,
+				E44EE3701C33ACD4005FA8CC /* stop_icon.png in Resources */,
 				E42E66671C2B993900F0392A /* images.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
