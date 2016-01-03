@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rlr-9N-A9s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rlr-9N-A9s">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -256,6 +256,18 @@
                                     <action selector="buttonTapped:" destination="lHd-Jf-gyz" eventType="touchUpInside" id="KnV-gT-2ny"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="About Me:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NfJ-IA-Rwl">
+                                <rect key="frame" x="20" y="297" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9VO-jT-vRs">
+                                <rect key="frame" x="20" y="341" width="335" height="206"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">I am a California native who loves to eat, travel, and make new friends.  I am a dog person.  I am currently working as a software engineer in the leading dating app company Charmd.  I play the cello in my spare time, and love to have jam sessions with new friends!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -271,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQ6-02-2Vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2284" y="261"/>
+            <point key="canvasLocation" x="2283.5" y="260.5"/>
         </scene>
         <!--Matches-->
         <scene sceneID="y2J-mX-x0d">
@@ -342,15 +354,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-pH-3TM">
-                                <rect key="frame" x="129" y="208" width="55" height="30"/>
-                                <state key="normal" title="Charmd">
-                                    <color key="titleColor" red="0.19331605856081069" green="0.62091619318181812" blue="0.28052089589992257" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="CxP-DA-kOk" kind="show" id="Shk-JN-dKm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieb-Ae-tkv">
                                 <rect key="frame" x="260" y="72" width="93" height="30"/>
                                 <state key="normal" title="Past Matches"/>
@@ -367,6 +370,15 @@
                                     <action selector="play:" destination="LNH-sd-zS8" eventType="touchUpInside" id="pik-FB-ey5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-pH-3TM">
+                                <rect key="frame" x="129" y="208" width="55" height="30"/>
+                                <state key="normal" title="Charmd">
+                                    <color key="titleColor" red="0.19331605856081069" green="0.62091619318181812" blue="0.28052089589992257" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="charmd" destination="LNH-sd-zS8" eventType="touchUpInside" id="iCF-nV-fVk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -375,7 +387,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="audioProgress" destination="o5A-M2-eQ2" id="eru-Cf-Wmb"/>
-                        <outlet property="charmd_btn" destination="jaC-pH-3TM" id="yKT-J8-kaM"/>
                         <outlet property="matchesName" destination="9wk-iN-uFT" id="wVJ-EW-qc0"/>
                         <outlet property="matchesPic" destination="WOa-Zr-qAS" id="1Qa-wz-Lkp"/>
                         <outlet property="pass_btn" destination="sjn-X3-q8W" id="BZE-XR-Zs0"/>
@@ -530,6 +541,7 @@
             </objects>
             <point key="canvasLocation" x="3194" y="-862"/>
         </scene>
+<<<<<<< HEAD
         <!--profiles-->
         <scene sceneID="mpf-za-BgD">
             <objects>
@@ -636,6 +648,8 @@
             </objects>
             <point key="canvasLocation" x="3203" y="-186"/>
         </scene>
+=======
+>>>>>>> 43e5f1230282ef9814d44371101dd9a418bcbaa4
         <!--Tab Bar Controller-->
         <scene sceneID="ToW-vN-ZbR">
             <objects>
