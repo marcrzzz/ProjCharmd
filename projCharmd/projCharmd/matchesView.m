@@ -11,9 +11,6 @@
 @implementation matchesView
 AVAudioPlayer *player2;
 
--(IBAction)charmd {
-    UIAlertViewStylePlainTextInput;
-}
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.matchesPic.layer.cornerRadius = self.matchesPic.frame.size.width / 2;

@@ -541,7 +541,6 @@
             </objects>
             <point key="canvasLocation" x="3194" y="-862"/>
         </scene>
-<<<<<<< HEAD
         <!--profiles-->
         <scene sceneID="mpf-za-BgD">
             <objects>
@@ -648,8 +647,6 @@
             </objects>
             <point key="canvasLocation" x="3203" y="-186"/>
         </scene>
-=======
->>>>>>> 43e5f1230282ef9814d44371101dd9a418bcbaa4
         <!--Tab Bar Controller-->
         <scene sceneID="ToW-vN-ZbR">
             <objects>

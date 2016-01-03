@@ -20,8 +20,6 @@
 
 - (IBAction)play:(UIButton *)sender;
 
-- (IBAction)charmd;
-
 @property (weak, nonatomic) IBOutlet UIButton *charmd_btn;
 @property (weak, nonatomic) IBOutlet UIButton *pass_btn;
 
