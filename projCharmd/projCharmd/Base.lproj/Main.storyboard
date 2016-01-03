@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rlr-9N-A9s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rlr-9N-A9s">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -544,7 +544,7 @@
         <!--profiles-->
         <scene sceneID="mpf-za-BgD">
             <objects>
-                <viewController storyboardIdentifier="profiles" title="profiles" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iy8-vx-2Mm" customClass="profiles" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profiles" title="profiles" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iy8-vx-2Mm" customClass="profileView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8FB-yS-RQe"/>
                         <viewControllerLayoutGuide type="bottom" id="e3B-xm-tkM"/>
@@ -594,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cax-Ta-Qec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3750.5" y="-928.5"/>
+            <point key="canvasLocation" x="3630.5" y="-1059.5"/>
         </scene>
         <!--Profile View-->
         <scene sceneID="q0l-Iz-0Sh">
@@ -608,11 +608,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tatum.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-mv-LkN">
-                                <rect key="frame" x="125" y="113" width="125" height="125"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64E-UL-Ocq">
-                                <rect key="frame" x="206" y="290" width="69" height="60"/>
+                                <rect key="frame" x="211" y="304" width="69" height="60"/>
                                 <state key="normal" title="Chat">
                                     <color key="titleColor" red="0.19331605860000001" green="0.62091619320000002" blue="0.28052089590000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -635,6 +632,9 @@
                                     <color key="titleColor" red="0.82244318179999998" green="0.19474569250000001" blue="0.19807192940000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tatum.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-mv-LkN">
+                                <rect key="frame" x="129" y="123" width="125" height="125"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -645,7 +645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X09-6C-EJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3203" y="-186"/>
+            <point key="canvasLocation" x="3060.5" y="-98.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ToW-vN-ZbR">
