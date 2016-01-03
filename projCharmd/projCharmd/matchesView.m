@@ -13,8 +13,13 @@ AVAudioPlayer *player2;
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    self.matchesPic.layer.cornerRadius = self.matchesPic.frame.size.width / 2;
+    self.matchesPic.clipsToBounds = YES;
+    self.matchesPic.contentMode = UIViewContentModeScaleAspectFill;
     self.matchesPic.hidden=YES;
     self.matchesName.hidden=YES;
+    [_charmd_btn setEnabled:NO];
+    [_pass_btn setEnabled:NO];
 
     NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:@"andrewAudio" ofType:@"mp3"];
     NSURL *outputFileURL = [[NSURL alloc] initFileURLWithPath:audioFilePath];
@@ -28,6 +33,8 @@ AVAudioPlayer *player2;
     [_playButton setTitle:@"Play" forState:UIControlStateNormal];
     self.matchesPic.hidden=0;
     self.matchesName.hidden=0;
+    [_charmd_btn setEnabled:YES];
+    [_pass_btn setEnabled:YES];
     
 }
 

@@ -19,7 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    UIViewController *top = [UIApplication sharedApplication].keyWindow.rootViewController;
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController *recordView = [storyboard instantiateViewControllerWithIdentifier:@"recordView"];
+    [top presentViewController:recordView animated:YES completion:nil];
     
     if ([FBSDKAccessToken currentAccessToken]) {
 //            self.fBloginButton.hidden=YES;

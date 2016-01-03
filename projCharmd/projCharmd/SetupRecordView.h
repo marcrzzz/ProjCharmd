@@ -14,12 +14,12 @@
 
 @interface SetupRecordView : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
+
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIProgressView *audioProgress;
 @property (strong, nonatomic) NSTimer *timer;
-
 
 - (IBAction)recordTapped:(id)sender;
 - (IBAction)stopRecord:(id)sender;

@@ -15,7 +15,9 @@ AVAudioPlayer *play;
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    
+    self.profile_image.layer.cornerRadius = self.profile_image.frame.size.width / 2;
+    self.profile_image.clipsToBounds = YES;
+    self.profile_image.contentMode = UIViewContentModeScaleAspectFill;
     NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:@"taysAudio" ofType:@"m4a"];
     NSURL *outputFileURL = [[NSURL alloc] initFileURLWithPath:audioFilePath];
 

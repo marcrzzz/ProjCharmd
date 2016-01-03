@@ -15,12 +15,20 @@
 AVAudioRecorder *recorder;
 AVAudioPlayer *player;
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+   
+//    UIImage * record_icon = [UIImage imageNamed:@"record_icon.png"];
+//    
+//    [_recordButton setImage:record_icon forState:UIControlStateHighlighted];
     [self.audioProgress setHidden:YES];
     [_stopButton setEnabled:NO];
     [_playButton setEnabled:NO];
+    
+    
     
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
@@ -51,7 +59,8 @@ AVAudioPlayer *player;
 
 
 - (IBAction)recordTapped:(id)sender {
-    
+  
+
     // Stop the audio player before recording
     if (player.playing) {
         [player stop];

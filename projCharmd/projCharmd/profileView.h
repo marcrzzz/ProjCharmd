@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (strong, nonatomic) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIProgressView *audioProgress;
+@property (weak, nonatomic) IBOutlet UIImageView *profile_image;
 
 
 
