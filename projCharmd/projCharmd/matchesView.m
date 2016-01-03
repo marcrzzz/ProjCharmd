@@ -30,7 +30,7 @@ AVAudioPlayer *player2;
     
 }
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
-    [_playButton setTitle:@"Play" forState:UIControlStateNormal];
+    _playButton.selected=NO;
     self.matchesPic.hidden=0;
     self.matchesName.hidden=0;
     [_charmd_btn setEnabled:YES];
@@ -38,27 +38,45 @@ AVAudioPlayer *player2;
     
 }
 
-- (IBAction)pressedPlay:(id)sender {
-    if (!player2.playing){
+- (IBAction)pressedPlay:(UIButton *)sender {
+//    if (!player2.playing){
+//        [player2 setDelegate:self];
+//        [player2 setVolume:100];
+//        [player2 play];
+//        [_playButton setTitle:@"Pause" forState:UIControlStateNormal];
+//        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.25
+//                                                      target:self
+//                                                    selector:@selector(updateProgress)
+//                                                    userInfo:nil
+//                                                     repeats:YES];
+//        
+//        
+//        
+//    }
+//    else {
+//        
+//        // Pause recording
+//        
+//        [player2 pause];
+//        [_playButton setTitle:@"Play" forState:UIControlStateNormal];
+//    }
+    if (sender.selected) {
+        
+        [player2 pause];
+        sender.selected=NO;
+    }
+    else{
         [player2 setDelegate:self];
         [player2 setVolume:100];
         [player2 play];
-        [_playButton setTitle:@"Pause" forState:UIControlStateNormal];
+        
         self.timer = [NSTimer scheduledTimerWithTimeInterval:0.25
                                                       target:self
                                                     selector:@selector(updateProgress)
                                                     userInfo:nil
                                                      repeats:YES];
         
-        
-        
-    }
-    else {
-        
-        // Pause recording
-        
-        [player2 pause];
-        [_playButton setTitle:@"Play" forState:UIControlStateNormal];
+        sender.selected=YES;
     }
 }
 

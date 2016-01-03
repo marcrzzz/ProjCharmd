@@ -19,7 +19,7 @@
 
 
 
-- (IBAction)play:(id)sender;
+- (IBAction)buttonTapped:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *userAge;
 
 

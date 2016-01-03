@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *audioProgress;
 @property (weak, nonatomic) IBOutlet UILabel *matchesName;
 @property (weak, nonatomic) IBOutlet UIImageView *matchesPic;
-- (IBAction)pressedPlay:(id)sender;
+- (IBAction)pressedPlay:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *charmd_btn;
 @property (weak, nonatomic) IBOutlet UIButton *pass_btn;
 

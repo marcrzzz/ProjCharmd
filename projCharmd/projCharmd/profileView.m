@@ -15,6 +15,8 @@ AVAudioPlayer *play;
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+//    UIImage *selectedPlay =[UIImage imageNamed:@"play_icon.png"];
+//    UIImage *unselectedPause =[UIImage imageNamed:@"pause_icon.png"];
     self.profile_image.layer.cornerRadius = self.profile_image.frame.size.width / 2;
     self.profile_image.clipsToBounds = YES;
     self.profile_image.contentMode = UIViewContentModeScaleAspectFill;
@@ -26,38 +28,39 @@ AVAudioPlayer *play;
     
     
 }
-- (IBAction)play:(id)sender {
-    if (!play.playing){
+
+
+    
+    
+
+
+- (IBAction)buttonTapped:(UIButton *)sender{
+    
+    
+    //first time sender.selected is No
+    if (sender.selected) {
+        
+        [play pause];
+        sender.selected=NO;
+    }
+    else{
         [play setDelegate:self];
         [play setVolume:100];
         [play play];
-        [_playButton setTitle:@"Pause" forState:UIControlStateNormal];
+        
         self.timer = [NSTimer scheduledTimerWithTimeInterval:0.25
                                                       target:self
                                                     selector:@selector(updateProgress)
                                                     userInfo:nil
                                                      repeats:YES];
-       
         
-        
+        sender.selected=YES;
     }
-    else {
-        
-        // Pause recording
-       
-        [play pause];
-        [_playButton setTitle:@"Play" forState:UIControlStateNormal];
-    }
-    
-//    CFBundleRef mainBundle =CFBundleGetMainBundle();
-//    CFURLRef soundFileURLRef;
-//    soundFileURLRef = CFBundleCopyResourceURL(mainBundle, (CFStringRef) @"taysAudio", CFSTR ("m4a"), NULL);
-//    UInt32 soundID;
-//    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundID);
-//    AudioServicesPlaySystemSound(soundID);
 }
+
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
-    [_playButton setTitle:@"Play" forState:UIControlStateNormal];
+    
+    _playButton.selected=NO;
     
 }
 
