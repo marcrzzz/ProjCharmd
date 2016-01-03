@@ -506,21 +506,18 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycH-kp-3o2">
                                 <rect key="frame" x="15" y="224" width="125" height="125"/>
                                 <connections>
-                                    <action selector="gotoProfile:" destination="S5w-3o-Vgg" eventType="touchUpInside" id="kzC-2a-VcG"/>
                                     <segue destination="y6y-uh-lGC" kind="show" id="0OC-Ow-7UC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elb-cC-Uws">
                                 <rect key="frame" x="15" y="72" width="125" height="125"/>
                                 <connections>
-                                    <action selector="gotoProfile:" destination="S5w-3o-Vgg" eventType="touchUpInside" id="8Rs-M6-vsY"/>
                                     <segue destination="Iy8-vx-2Mm" kind="show" id="lPj-VK-60a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvm-3B-6MT">
                                 <rect key="frame" x="15" y="373" width="125" height="125"/>
                                 <connections>
-                                    <action selector="gotoProfile:" destination="S5w-3o-Vgg" eventType="touchUpInside" id="9yb-Mn-So1"/>
                                     <segue destination="C8l-Za-uWO" kind="show" id="PTp-My-Hd2"/>
                                 </connections>
                             </button>
@@ -544,10 +541,10 @@
             </objects>
             <point key="canvasLocation" x="3194" y="-862"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View-->
         <scene sceneID="tKN-QQ-BVm">
             <objects>
-                <viewController id="y6y-uh-lGC" sceneMemberID="viewController">
+                <viewController id="y6y-uh-lGC" customClass="profileView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TvP-f0-FTK"/>
                         <viewControllerLayoutGuide type="bottom" id="ObT-X6-1bP"/>
@@ -576,7 +573,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ryan.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-GW-htP">
-                                <rect key="frame" x="117" y="72" width="145" height="126"/>
+                                <rect key="frame" x="117" y="72" width="125" height="125"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Location: 1.3 miles away" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgx-Kl-Boj">
                                 <rect key="frame" x="20" y="277" width="182" height="30"/>
@@ -613,6 +610,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="profile_image" destination="cP0-GW-htP" id="otn-3q-l1V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deg-9f-tmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -694,66 +694,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="playButton" destination="1Cc-3R-5QI" id="LkW-mc-DsA"/>
-                        <outlet property="profileImage" destination="KX3-4H-okv" id="J5E-iL-4sx"/>
-                        <outlet property="progess" destination="akz-Lb-jlP" id="5gi-gl-5Ko"/>
-                        <outlet property="userName" destination="J4W-RL-en1" id="QaU-9J-3aA"/>
+                        <outlet property="profile_image" destination="KX3-4H-okv" id="Rzo-c6-dah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cax-Ta-Qec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3630.5" y="-1059.5"/>
-        </scene>
-        <!--Profile View-->
-        <scene sceneID="q0l-Iz-0Sh">
-            <objects>
-                <viewController id="CxP-DA-kOk" customClass="profileView" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="e2U-IA-OYm"/>
-                        <viewControllerLayoutGuide type="bottom" id="fmS-w1-dbj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jXZ-EG-nan">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64E-UL-Ocq">
-                                <rect key="frame" x="211" y="304" width="69" height="60"/>
-                                <state key="normal" title="Chat">
-                                    <color key="titleColor" red="0.19331605860000001" green="0.62091619320000002" blue="0.28052089590000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Andrew Wyatt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBM-5C-Uj1">
-                                <rect key="frame" x="137" y="256" width="108" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sko-3V-jgP">
-                                <rect key="frame" x="177" y="278" width="21" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar9-Bu-DxG">
-                                <rect key="frame" x="125" y="305" width="33" height="30"/>
-                                <state key="normal" title="Pass">
-                                    <color key="titleColor" red="0.82244318179999998" green="0.19474569250000001" blue="0.19807192940000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tatum.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-mv-LkN">
-                                <rect key="frame" x="129" y="123" width="125" height="125"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="profile_image" destination="7iS-mv-LkN" id="dEh-C6-iiu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X09-6C-EJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3060.5" y="-98.5"/>
+            <point key="canvasLocation" x="4166.5" y="-771.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ToW-vN-ZbR">
@@ -793,10 +739,10 @@
             </objects>
             <point key="canvasLocation" x="1702" y="964"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View-->
         <scene sceneID="AVC-Vo-UxV">
             <objects>
-                <viewController id="C8l-Za-uWO" sceneMemberID="viewController">
+                <viewController id="C8l-Za-uWO" customClass="profileView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cFn-Uy-KWH"/>
                         <viewControllerLayoutGuide type="bottom" id="60x-VP-9AT"/>
@@ -806,7 +752,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="BYU-rq-ijM">
-                                <rect key="frame" x="115" y="72" width="145" height="126"/>
+                                <rect key="frame" x="115" y="72" width="125" height="125"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ryan Stinson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6b-Wo-48P">
                                 <rect key="frame" x="129" y="206" width="116" height="22"/>
@@ -862,6 +808,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="profile_image" destination="BYU-rq-ijM" id="76U-yY-V3a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W71-1g-jqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
