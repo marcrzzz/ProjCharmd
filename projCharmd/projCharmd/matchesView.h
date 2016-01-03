@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+
 @interface matchesView : UIViewController <AVAudioPlayerDelegate>
 
 
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *matchesName;
 @property (weak, nonatomic) IBOutlet UIImageView *matchesPic;
 - (IBAction)pressedPlay:(UIButton *)sender;
+- (IBAction)charmd;
 @property (weak, nonatomic) IBOutlet UIButton *charmd_btn;
 @property (weak, nonatomic) IBOutlet UIButton *pass_btn;
 

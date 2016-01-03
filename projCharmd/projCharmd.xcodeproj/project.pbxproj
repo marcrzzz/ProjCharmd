@@ -13,7 +13,6 @@
 		A77998761C2A18B60037BDCB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77998751C2A18B60037BDCB /* CoreLocation.framework */; };
 		A77998781C2A18C60037BDCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77998771C2A18C60037BDCB /* CoreGraphics.framework */; };
 		A779987A1C2A18D00037BDCB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77998791C2A18D00037BDCB /* MobileCoreServices.framework */; };
-		A779987C1C2A18DF0037BDCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A779987B1C2A18DF0037BDCB /* QuartzCore.framework */; };
 		A779987E1C2A18E60037BDCB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A779987D1C2A18E60037BDCB /* Security.framework */; };
 		A77998801C2A18F10037BDCB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A779987F1C2A18F10037BDCB /* StoreKit.framework */; };
 		A77998821C2A19000037BDCB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77998811C2A19000037BDCB /* SystemConfiguration.framework */; };
@@ -136,7 +135,6 @@
 				A77998821C2A19000037BDCB /* SystemConfiguration.framework in Frameworks */,
 				A77998801C2A18F10037BDCB /* StoreKit.framework in Frameworks */,
 				A779987E1C2A18E60037BDCB /* Security.framework in Frameworks */,
-				A779987C1C2A18DF0037BDCB /* QuartzCore.framework in Frameworks */,
 				A779987A1C2A18D00037BDCB /* MobileCoreServices.framework in Frameworks */,
 				A77998781C2A18C60037BDCB /* CoreGraphics.framework in Frameworks */,
 				A77998761C2A18B60037BDCB /* CoreLocation.framework in Frameworks */,
