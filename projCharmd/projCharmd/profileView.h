@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *profile_image;
 
 
+- (IBAction)gotoProfile:(id)sender;
 
 - (IBAction)buttonTapped:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *userAge;

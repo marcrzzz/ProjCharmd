@@ -361,8 +361,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX3-Bt-aP7">
                                 <rect key="frame" x="5" y="164" width="35" height="35"/>
                                 <state key="normal" title="Play" image="play_icon.png"/>
+                                <state key="disabled" image="play_icon.png"/>
+                                <state key="selected" image="pause_icon.png"/>
                                 <connections>
-                                    <action selector="pressedPlay:" destination="LNH-sd-zS8" eventType="touchUpInside" id="YTP-CN-moc"/>
+                                    <action selector="play:" destination="LNH-sd-zS8" eventType="touchUpInside" id="pik-FB-ey5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -469,14 +471,20 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1M-eF-OhD">
                                 <rect key="frame" x="141" y="168" width="35" height="35"/>
                                 <state key="normal" title="Button" image="play_icon.png"/>
+                                <state key="disabled" image="play_icon.png"/>
+                                <state key="selected" image="pause_icon.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9m-jW-2aL">
                                 <rect key="frame" x="141" y="321" width="35" height="35"/>
                                 <state key="normal" title="Button" image="play_icon.png"/>
+                                <state key="disabled" image="play_icon.png"/>
+                                <state key="selected" image="pause_icon.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQH-8K-hfC">
                                 <rect key="frame" x="141" y="463" width="35" height="35"/>
                                 <state key="normal" title="Button" image="play_icon.png"/>
+                                <state key="disabled" image="play_icon.png"/>
+                                <state key="selected" image="pause_icon.png"/>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CD8-PH-veK">
                                 <rect key="frame" x="184" y="185" width="150" height="2"/>
@@ -490,6 +498,24 @@
                                 <rect key="frame" x="184" y="480" width="150" height="2"/>
                                 <color key="progressTintColor" red="0.21585912139999999" green="0.2312706491" blue="0.25100522689999999" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycH-kp-3o2">
+                                <rect key="frame" x="15" y="224" width="125" height="125"/>
+                                <connections>
+                                    <action selector="gotoProfile:" destination="S5w-3o-Vgg" eventType="touchUpInside" id="kzC-2a-VcG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elb-cC-Uws">
+                                <rect key="frame" x="15" y="72" width="125" height="125"/>
+                                <connections>
+                                    <action selector="gotoProfile:" destination="S5w-3o-Vgg" eventType="touchUpInside" id="8Rs-M6-vsY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvm-3B-6MT">
+                                <rect key="frame" x="15" y="373" width="125" height="125"/>
+                                <connections>
+                                    <action selector="gotoProfile:" destination="S5w-3o-Vgg" eventType="touchUpInside" id="9yb-Mn-So1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -503,6 +529,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wI-k2-kAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3194" y="-862"/>
+        </scene>
+        <!--profiles-->
+        <scene sceneID="mpf-za-BgD">
+            <objects>
+                <viewController storyboardIdentifier="profiles" title="profiles" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iy8-vx-2Mm" customClass="profiles" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8FB-yS-RQe"/>
+                        <viewControllerLayoutGuide type="bottom" id="e3B-xm-tkM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fou-st-NK9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KX3-4H-okv">
+                                <rect key="frame" x="125" y="59" width="125" height="125"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cc-3R-5QI">
+                                <rect key="frame" x="93" y="234" width="35" height="35"/>
+                                <state key="normal" title="Button" image="play_icon.png"/>
+                                <state key="disabled" image="play_icon.png"/>
+                                <state key="selected" image="pause_icon.png"/>
+                                <connections>
+                                    <action selector="play:" destination="Iy8-vx-2Mm" eventType="touchUpInside" id="aih-vc-HD9"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="akz-Lb-jlP">
+                                <rect key="frame" x="156" y="251" width="150" height="2"/>
+                                <color key="progressTintColor" red="0.21585912139999999" green="0.2312706491" blue="0.25100522689999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-RL-en1">
+                                <rect key="frame" x="149" y="192" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="playButton" destination="1Cc-3R-5QI" id="LkW-mc-DsA"/>
+                        <outlet property="profileImage" destination="KX3-4H-okv" id="J5E-iL-4sx"/>
+                        <outlet property="progess" destination="akz-Lb-jlP" id="5gi-gl-5Ko"/>
+                        <outlet property="userName" destination="J4W-RL-en1" id="QaU-9J-3aA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cax-Ta-Qec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3750.5" y="-928.5"/>
         </scene>
         <!--Profile View-->
         <scene sceneID="q0l-Iz-0Sh">

@@ -15,8 +15,7 @@ AVAudioPlayer *play;
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-//    UIImage *selectedPlay =[UIImage imageNamed:@"play_icon.png"];
-//    UIImage *unselectedPause =[UIImage imageNamed:@"pause_icon.png"];
+
     self.profile_image.layer.cornerRadius = self.profile_image.frame.size.width / 2;
     self.profile_image.clipsToBounds = YES;
     self.profile_image.contentMode = UIViewContentModeScaleAspectFill;
@@ -33,6 +32,13 @@ AVAudioPlayer *play;
     
     
 
+
+- (IBAction)gotoProfile:(id)sender {
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"profiles"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 - (IBAction)buttonTapped:(UIButton *)sender{
     

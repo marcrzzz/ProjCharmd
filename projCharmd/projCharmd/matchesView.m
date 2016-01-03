@@ -38,28 +38,10 @@ AVAudioPlayer *player2;
     
 }
 
-- (IBAction)pressedPlay:(UIButton *)sender {
-//    if (!player2.playing){
-//        [player2 setDelegate:self];
-//        [player2 setVolume:100];
-//        [player2 play];
-//        [_playButton setTitle:@"Pause" forState:UIControlStateNormal];
-//        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.25
-//                                                      target:self
-//                                                    selector:@selector(updateProgress)
-//                                                    userInfo:nil
-//                                                     repeats:YES];
-//        
-//        
-//        
-//    }
-//    else {
-//        
-//        // Pause recording
-//        
-//        [player2 pause];
-//        [_playButton setTitle:@"Play" forState:UIControlStateNormal];
-//    }
+- (IBAction)play:(UIButton *)sender{
+    
+    
+    //first time sender.selected is No
     if (sender.selected) {
         
         [player2 pause];
@@ -80,6 +62,7 @@ AVAudioPlayer *player2;
     }
 }
 
+
 - (void)updateProgress
 {
     float timeLeft = player2.currentTime/player2.duration;
@@ -88,6 +71,8 @@ AVAudioPlayer *player2;
     
     self.audioProgress.progress= timeLeft;
 }
+
+
 
 
 
