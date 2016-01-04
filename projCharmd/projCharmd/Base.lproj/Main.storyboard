@@ -376,7 +376,7 @@
                                     <color key="titleColor" red="0.19331605856081069" green="0.62091619318181812" blue="0.28052089589992257" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="charmd" destination="LNH-sd-zS8" eventType="touchUpInside" id="iCF-nV-fVk"/>
+                                    <action selector="pressedCharmd:" destination="LNH-sd-zS8" eventType="touchUpInside" id="nme-gP-hwP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -606,9 +606,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ryan.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-GW-htP">
-                                <rect key="frame" x="117" y="72" width="145" height="126"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1055,7 +1052,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCa-1D-O3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2268.5" y="963.5"/>
+            <point key="canvasLocation" x="1838.5" y="856.5"/>
         </scene>
         <!--Profile View-->
         <scene sceneID="AVC-Vo-UxV">

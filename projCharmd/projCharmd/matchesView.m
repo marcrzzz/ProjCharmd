@@ -62,6 +62,46 @@ AVAudioPlayer *player2;
     }
 }
 
+- (IBAction)pressedCharmd:(id)sender {
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"MATCH"
+                                          message:@"You have charm'd Andrew and he has charm'd you!"
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       NSLog(@"Cancel action");
+                                   }];
+    
+    UIAlertAction *chatAction = [UIAlertAction
+                               actionWithTitle:NSLocalizedString(@"Chat", @"chat action")
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   NSString * storyboardName = @"Main";
+                                   UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+                                   UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"chatView"];
+                                   [self.tabBarController presentViewController:controller animated:YES completion:nil];
+                               }];
+    UIAlertAction *profileAction = [UIAlertAction
+                               actionWithTitle:NSLocalizedString(@"Profile", @"profile action")
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   NSLog(@"OK action");
+                               }];
+    
+    [alertController addAction:cancelAction];
+    [alertController addAction:profileAction];
+    [alertController addAction:chatAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+     
+}
+
 
 - (void)updateProgress
 {
