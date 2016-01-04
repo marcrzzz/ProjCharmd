@@ -376,7 +376,7 @@
                                     <color key="titleColor" red="0.19331605856081069" green="0.62091619318181812" blue="0.28052089589992257" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="charmd" destination="LNH-sd-zS8" eventType="touchUpInside" id="iCF-nV-fVk"/>
+                                    <action selector="pressedCharmd:" destination="LNH-sd-zS8" eventType="touchUpInside" id="nme-gP-hwP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -737,7 +737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOq-0N-xmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702" y="964"/>
+            <point key="canvasLocation" x="1838.5" y="856.5"/>
         </scene>
         <!--Profile View-->
         <scene sceneID="AVC-Vo-UxV">

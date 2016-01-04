@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *matchesPic;
 
 - (IBAction)play:(UIButton *)sender;
+- (IBAction)pressedCharmd:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *charmd_btn;
 @property (weak, nonatomic) IBOutlet UIButton *pass_btn;
