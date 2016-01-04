@@ -509,12 +509,6 @@
                                     <segue destination="y6y-uh-lGC" kind="show" id="0OC-Ow-7UC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elb-cC-Uws">
-                                <rect key="frame" x="15" y="72" width="125" height="125"/>
-                                <connections>
-                                    <segue destination="Iy8-vx-2Mm" kind="show" id="lPj-VK-60a"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvm-3B-6MT">
                                 <rect key="frame" x="15" y="373" width="125" height="125"/>
                                 <connections>
@@ -527,6 +521,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elb-cC-Uws">
+                                <rect key="frame" x="15" y="72" width="125" height="125"/>
+                                <connections>
+                                    <segue destination="Iy8-vx-2Mm" kind="show" id="lPj-VK-60a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
