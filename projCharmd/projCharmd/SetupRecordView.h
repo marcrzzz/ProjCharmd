@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *audioProgress;
 @property (strong, nonatomic) NSTimer *timer;
 
-- (IBAction)recordTapped:(id)sender;
+- (IBAction)recordTapped:(UIButton *)sender;
 - (IBAction)stopRecord:(id)sender;
 - (IBAction)playRecording:(id)sender;
 

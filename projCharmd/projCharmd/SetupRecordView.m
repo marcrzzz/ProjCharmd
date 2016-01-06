@@ -58,30 +58,46 @@ AVAudioPlayer *player;
 }
 
 
-- (IBAction)recordTapped:(id)sender {
-  
-
-    // Stop the audio player before recording
+- (IBAction)recordTapped:(UIButton *)sender {
     if (player.playing) {
         [player stop];
     }
     
-    if (!recorder.recording) {
+    if (!recorder.recording && sender.selected) {
+        
         AVAudioSession *session = [AVAudioSession sharedInstance];
         [session setActive:YES error:nil];
         [self.timer invalidate];
         //[self.audioProgress setHidden:YES];
         // Start recording
         [recorder record];
-        [_recordButton setTitle:@"Pause" forState:UIControlStateNormal];
-        
-        
-    } else {
-        
-        // Pause recording
-        [recorder pause];
-        [_recordButton setTitle:@"Record" forState:UIControlStateNormal];
+        sender.selected=NO;
     }
+    else{
+        [recorder pause];
+        
+        
+        sender.selected=YES;
+    }
+    // Stop the audio player before recording
+    
+    
+//    if (!recorder.recording) {
+//        AVAudioSession *session = [AVAudioSession sharedInstance];
+//        [session setActive:YES error:nil];
+//        [self.timer invalidate];
+//        //[self.audioProgress setHidden:YES];
+//        // Start recording
+//        [recorder record];
+//        [_recordButton setTitle:@"Pause" forState:UIControlStateNormal];
+//        
+//        
+//    } else {
+//        
+//        // Pause recording
+//        [recorder pause];
+//        [_recordButton setTitle:@"Record" forState:UIControlStateNormal];
+//    }
     
     [_stopButton setEnabled:YES];
     [_playButton setEnabled:NO];
@@ -98,7 +114,7 @@ AVAudioPlayer *player;
 
 - (IBAction)stopRecord:(id)sender {
     [recorder stop];
-    
+    _recordButton.selected=NO;
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     [audioSession setActive:NO error:nil];
     [_playButton setEnabled:YES];

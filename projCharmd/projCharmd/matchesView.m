@@ -16,12 +16,15 @@ AVAudioPlayer *player2;
     self.matchesPic.layer.cornerRadius = self.matchesPic.frame.size.width / 2;
     self.matchesPic.clipsToBounds = YES;
     self.matchesPic.contentMode = UIViewContentModeScaleAspectFill;
+    self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+    self.profileImage.clipsToBounds = YES;
+    self.profileImage.contentMode = UIViewContentModeScaleAspectFill;
     self.matchesPic.hidden=YES;
     self.matchesName.hidden=YES;
     [_charmd_btn setEnabled:NO];
     [_pass_btn setEnabled:NO];
 
-    NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:@"andrewAudio" ofType:@"mp3"];
+    NSString *audioFilePath = [[NSBundle mainBundle] pathForResource:@"andrew_Audio" ofType:@"m4a"];
     NSURL *outputFileURL = [[NSURL alloc] initFileURLWithPath:audioFilePath];
     
     
@@ -65,7 +68,7 @@ AVAudioPlayer *player2;
 - (IBAction)pressedCharmd:(id)sender {
     UIAlertController *alertController = [UIAlertController
                                           alertControllerWithTitle:@"MATCH"
-                                          message:@"You have charm'd Andrew and he has charm'd you!"
+                                          message:@"You have charm'd each other!"
                                           preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cancelAction = [UIAlertAction
@@ -84,15 +87,17 @@ AVAudioPlayer *player2;
                                    NSString * storyboardName = @"Main";
                                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
                                    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"chatView"];
-                                   [self.tabBarController presentViewController:controller animated:YES completion:nil];
+                                   [self.navigationController pushViewController:controller animated:YES];
                                }];
     UIAlertAction *profileAction = [UIAlertAction
                                actionWithTitle:NSLocalizedString(@"Profile", @"profile action")
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
-                                   NSLog(@"OK action");
-                               }];
+                                   NSString * storyboardName = @"Main";
+                                   UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+                                   UIViewController *controller2 = [storyboard instantiateViewControllerWithIdentifier:@"profileAndrew"];
+                                   [self.navigationController pushViewController:controller2 animated:YES];                               }];
     
     [alertController addAction:cancelAction];
     [alertController addAction:profileAction];
